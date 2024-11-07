@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class KarakterKontrol : MonoBehaviour
 {
-    // Ad Soyad: 
-    // Öğrenci Numarası: 
+    // Ad Soyad:Bayram Mesut Boyraz
+    // Öğrenci Numarası:222011042 
 
 
     // Soru 1: Karakteri yön tuşları ile hareket ettiren kodu, HareketEt fonksiyonu içerisine yazınız.
@@ -26,6 +26,18 @@ public class KarakterKontrol : MonoBehaviour
 
     void Start()
     {
+        //Alttaki 1.Soru Cevabı
+        void update()
+        {
+            public float hız = 5f;
+            void Update ()
+            {
+                float yatay = Input.GetAxis("Horizontal");
+                 float dikey = Input.GetAxis("Vertical");
+                 Vector3 hareket = new Vector3(yatay, 0f, dikey);
+                 transform.Translate(hareket * hız *Time.deltaTime);
+            }
+        }
         karakterRb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,6 +48,28 @@ public class KarakterKontrol : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //Altatki 3.Soru Cevabı 
+        public class GameOver : MonoBehaivour
+        {
+            public Text oyunBittiText;
+            private void Start()
+            {
+                oyunBittiText.gameObject.setActive;
+               private void OnCollisionEnter
+               if(other).gameObject.CompareTag("Engel")
+               {
+                Debug.Log("Oyun Bitti");
+                oyunBittiText.gameObject.SetActive;
+               }
+               
+               //Alttaki 4.Soru Cevabı
+               public int skor = 0;
+               public text skorText;
+               private void OnCollisionEnter
+               if (other.gameObject.CompareTag) ("puan")
+               Destroy(other.gameObject);
+            }
+        }
         // Soru 3 ve soru 4 burada çözülecek.
     }
 
